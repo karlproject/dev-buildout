@@ -9,4 +9,4 @@ eggs
 var
 *.pyc
 *.egg-info
-devel
+src
