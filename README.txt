@@ -35,6 +35,10 @@ foreground::
 
   $ bin/karlserve serve
 
+Alternatively, you can use Paster::
+
+  $ bin/paster serve etc/karlserve.ini
+
 Visit the filesystem ZODB based test instance of Karl at::
 
   http://localhost:6543/fs
