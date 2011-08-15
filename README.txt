@@ -2,6 +2,23 @@
 Get Started Quickly With Karl
 =============================
 
+PostgreSQL
+----------
+
+Karl requires PostgreSQL be installed on your system.  If you are on OSX, this
+is reported to work::
+
+  $ sudo port install postgresql90
+  $ sudo port install postgresql90-server
+
+Link pg_config to a place that is in the path:
+
+  $ sudo ln -s /opt/local/lib/postgresql90/bin/pg_config /usr/local/bin/
+
+Alternately, add /opt/local/lib/postgresql90/bin/ to your path.
+
+Buildout
+--------
 Check out the buildout from github::
 
   $ git clone git://github.com/karlproject/dev-buildout.git karl
@@ -24,6 +41,9 @@ Visit the filesystem ZODB based test instance of Karl at::
 
 Default login and password are admin/admin.
 
+Relstorage
+----------
+
 Create the user and database for the PostgreSQL/Relstroage based instance of
 Karl::
 
@@ -34,6 +54,9 @@ Karl::
 Visit the Relstorage instance at::
 
   http://localhost:6543/pg
+
+Customization Packages
+----------------------
 
 Both instances are 'vanilla' instances of Karl which do not use any
 customization package. Most customers that are not OSI, going forward, will
@@ -46,6 +69,9 @@ customization package::
 To revert back to vanilla::
 
   $ bin/karlserve settings remove pg package
+
+Hacking
+-------
 
 To hack on some source code::
 
