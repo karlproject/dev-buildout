@@ -10,3 +10,4 @@ var
 *.pyc
 *.egg-info
 src
+parts
