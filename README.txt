@@ -84,4 +84,22 @@ To hack on some source code::
 
 Source code will now be in src/karl and src/karlserve.
 
+When playing with the code it's usually very useful to have some sample
+content added to the site, so that it looks a bit closer to a real site.
+The karlserve command can be used for that::
+
+  $ bin/karlserve samplegen
+
+Using this command 10 sample communities will be added to the site, each
+with their own wikis, blogs, calendars and files.
+
+The samplegen command does not create intranets, so they need to be added
+manually if they are required. To do that visit your instance at:
+
+  http://localhost:6543/fs/add_comunity.html
+
+Fill the form to add a community, making sure the 'intranets' checkbox is
+selected. An 'intranets' tab will be visible on the community pages after
+that, from which new intranets can be added.
+
 Enjoy!
