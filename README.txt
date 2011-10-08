@@ -102,4 +102,9 @@ Fill the form to add a community, making sure the 'intranets' checkbox is
 selected. An 'intranets' tab will be visible on the community pages after
 that, from which new intranets can be added.
 
+If you need to work with versioning, you need to initialize the repository
+before the versioning UI will show up. This is done with::
+
+  $ bin/karlserve init_repozitory pg
+
 Enjoy!
