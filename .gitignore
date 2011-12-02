@@ -11,3 +11,4 @@ var
 *.egg-info
 src
 parts
+.ropeproject
