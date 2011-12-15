@@ -59,6 +59,10 @@ Visit the Relstorage instance at::
 
   http://localhost:6543/pg
 
+Later, if you want to blow away the database and start over::
+
+  $ dropdb karltest; createdb -O karltest karltest
+
 Customization Packages
 ----------------------
 
