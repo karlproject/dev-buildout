@@ -100,7 +100,7 @@ with their own wikis, blogs, calendars and files.
 The samplegen command does not create intranets, so they need to be added
 manually if they are required. To do that visit your instance at:
 
-  http://localhost:6543/fs/add_comunity.html
+  http://localhost:6543/pg/add_community.html
 
 Fill the form to add a community, making sure the 'intranets' checkbox is
 selected. An 'intranets' tab will be visible on the community pages after
