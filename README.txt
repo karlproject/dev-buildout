@@ -78,6 +78,52 @@ To revert back to vanilla::
 
   $ bin/karlserve settings remove pg package
 
+Localization of date formats
+----------------------------
+
+Karl uses the Globalize javascript library to handle date formatting. It is
+recommended that whenever you need to use a date in a Karl or customization
+package template, you use Karl's globalize mechanism instead of formatting
+the date in Python code.
+
+To use gloablize, it's best to serve the date to the template in one of two
+formats: 'dd/mm/yyyy' for dates and 'dd/mm/yyyy hh:mm:ss' for dates with
+times. In the template, the date has to be by itself inside a tag and must
+use one of the globalize classes:
+
+  - globalize-short-date:
+    MM/dd/yyyy (02/15/2012)
+  - globalize-long-date:
+    MMMM dd yyyy (February 15 2012)
+  - globalize-full-date:
+    dddd, MMMM dd yyyy HH:mm (Wednesday, February 15 2012 12:00)
+  - globalize-date-time:
+    M/d/yyyy HH:mm (2/15/2012 12:00)
+  - globalize-calendar-full:
+    dddd M/d (Wednesday 2/15)
+  - globalize-calendar-abbr:
+    ddd M/d (Wed 2/15)
+  - globalize-calendar-long:
+    dddd, MMMM d (Wednesday, February 15)
+  - globalize-calendar-list:
+    ddd, MMM d (Wed, Feb 15)
+
+Globalize will convert the date to the proper format for the current
+culture on page load. Default culture is en-US.
+
+As an example::
+
+  <h3 class="globalize-long-date">02/15/2012</h3>
+
+Will display an h3 title with the date 'February 15 2012'. The same date will
+show up as '15 February 2012' if the user has 'europe' as date format default.
+
+Users can pick their date formatting culture when editing their own profile.
+Currently, the only options are US and Europe (uses en-GB). To set a
+different default for the whole site use karlserve settings::
+
+  $ bin/karlserve settings set pg date_format en-GB
+
 Hacking
 -------
 
