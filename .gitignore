@@ -9,6 +9,7 @@ eggs
 var
 *.pyc
 *.egg-info
+*.swp
 src
 parts
 .ropeproject
