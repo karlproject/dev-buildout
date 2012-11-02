@@ -42,7 +42,7 @@ ws = pkg_resources.working_set
 assert os.spawnle(
     os.P_WAIT, sys.executable, sys.executable,
     '-c', cmd, '-mqNxd', tmpeggs,
-      '--index=http://karlhosting.github.com/2/production/index/',
+      '--index=http://karlhosting.github.com/pyramid/production/index/',
       'zc.buildout==1.4.3',
     dict(os.environ,
          PYTHONPATH=
