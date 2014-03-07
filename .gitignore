@@ -15,3 +15,5 @@ src
 parts
 .ropeproject
 .idea
+node_modules
+bower_modules
