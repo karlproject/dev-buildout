@@ -3,6 +3,7 @@ bin
 lib
 include
 distribute*.gz
+.coverage
 .installed.cfg
 .mr.developer.cfg
 develop-eggs
