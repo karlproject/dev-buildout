@@ -33,15 +33,11 @@ Create a virtual environment and run the buildout::
 Karl is now built and ready to run.  Run Karl using Paste HTTP server in the
 foreground::
 
-  $ bin/karlserve serve
+  $ bin/paster serve etc/karl.ini
 
-Alternatively, you can use Paster::
+Visit the test instance of Karl at::
 
-  $ bin/paster serve etc/karlserve.ini
-
-Visit the filesystem ZODB based test instance of Karl at::
-
-  http://localhost:6543/fs
+  http://localhost:6543/
 
 Default login and password are admin/admin.
 
@@ -62,21 +58,6 @@ Visit the Relstorage instance at::
 Later, if you want to blow away the database and start over::
 
   $ dropdb karltest; createdb -O karltest karltest
-
-Customization Packages
-----------------------
-
-Both instances are 'vanilla' instances of Karl which do not use any
-customization package. Most customers that are not OSI, going forward, will
-not use any customization package. To make the pg instance use the 'osi'
-customization package::
-
-  $ bin/karlserve settings set pg package osi
-  $ bin/karlserve serve (restart if already running)
-
-To revert back to vanilla::
-
-  $ bin/karlserve settings remove pg package
 
 Localization of date formats
 ----------------------------
@@ -118,12 +99,6 @@ As an example::
 Will display an h3 title with the date 'February 15 2012'. The same date will
 show up as '15 February 2012' if the user has 'europe' as date format default.
 
-Users can pick their date formatting culture when editing their own profile.
-Currently, the only options are US and Europe (uses en-GB). To set a
-different default for the whole site use karlserve settings::
-
-  $ bin/karlserve settings set pg date_format en-GB
-
 Hacking
 -------
 
@@ -132,7 +107,7 @@ To hack on some source code::
   $ bin/develop co karl
   $ bin/buildout -No
 
-Source code will now be in src/karl and src/karlserve.
+Source code will now be in src/karl.
 
 When playing with the code it's usually very useful to have some sample
 content added to the site, so that it looks a bit closer to a real site.
