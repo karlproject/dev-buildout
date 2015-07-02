@@ -132,5 +132,14 @@ before the versioning UI will show up. This is done with::
 
   $ bin/karlserve init_repozitory pg
 
+If you are working on frontend static assets (JS, CSS) then you need to
+re-build the "compiled" JS and CSS:
+
+- cd src/karl
+
+- npm install
+
+- node_modules/.bin/gulp install
+
 Enjoy!
 
