@@ -26,8 +26,8 @@ Check out the buildout from github::
 
 Create a virtual environment and run the buildout::
 
-  $ virtualenv -p python2.6 --no-site-packages .
-  $ bin/python bootstrap.py
+  $ virtualenv -p python2.7 --no-site-packages .
+  $ bin/python bootstrap-buildout.py
   $ bin/buildout
 
 Karl is now built and ready to run.  Run Karl using Paste HTTP server in the
