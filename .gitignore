@@ -20,3 +20,4 @@ node_modules
 bower_modules
 
 dev.ini
+etc/nginx.conf
