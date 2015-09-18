@@ -21,3 +21,4 @@ bower_modules
 
 dev.ini
 etc/nginx.conf
+.DS_Store
