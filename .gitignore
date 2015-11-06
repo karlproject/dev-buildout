@@ -18,7 +18,5 @@ parts
 .idea
 node_modules
 bower_modules
-
+dist
 dev.ini
-etc/nginx.conf
-.DS_Store
