@@ -17,6 +17,23 @@ Link pg_config to a place that is in the path:
 
 Alternately, add /opt/local/lib/postgresql90/bin/ to your path.
 
+Relstorage
+----------
+
+Create the user and database for the PostgreSQL/Relstroage based instance of
+Karl::
+
+  $ createuser -P karltest
+    (Enter 'test' for password.  Repeat.  Answer 'n' to next three questions.)
+  $ createdb -O karltest karltest
+
+Later, if you want to blow away the database and start over::
+
+  $ dropdb karltest; createdb -O karltest karltest
+
+Run the updater, bin/json_updater and keep it running as long as
+you're making database changes.
+
 Buildout
 --------
 Check out the buildout from github::
@@ -30,10 +47,19 @@ Create a virtual environment and run the buildout::
   $ bin/python bootstrap-buildout.py
   $ bin/buildout
 
-Karl is now built and ready to run.  Run Karl using Paste HTTP server in the
-foreground::
+Karl is now built and ready to run. To start Karl and some support prcocesses::
 
-  $ bin/paster serve etc/karl.ini
+  $ bin/supervisord
+
+You can see what's running with::
+
+  $ bin/supervisorctl status
+
+At least the karl and updater processes should be running.
+
+You'll need to apply some Postgrea schema updates with::
+
+  $ bin/pgevolve -l
 
 Visit the test instance of Karl at::
 
@@ -41,23 +67,9 @@ Visit the test instance of Karl at::
 
 Default login and password are admin/admin.
 
-Relstorage
-----------
+To shutdown all of the processes, use::
 
-Create the user and database for the PostgreSQL/Relstroage based instance of
-Karl::
-
-  $ createuser -P karltest
-    (Enter 'test' for password.  Repeat.  Answer 'n' to next three questions.)
-  $ createdb -O karltest karltest
-
-Visit the Relstorage instance at::
-
-  http://localhost:6543/pg
-
-Later, if you want to blow away the database and start over::
-
-  $ dropdb karltest; createdb -O karltest karltest
+  $ bin/supervisorctl shutdown
 
 Localization of date formats
 ----------------------------
