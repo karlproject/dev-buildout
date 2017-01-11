@@ -5,22 +5,12 @@ Get Started Quickly With Karl
 PostgreSQL
 ----------
 
-Karl requires PostgreSQL be installed on your system.  If you are on OSX, this
-is reported to work::
-
-  $ sudo port install postgresql90
-  $ sudo port install postgresql90-server
-
-Link pg_config to a place that is in the path:
-
-  $ sudo ln -s /opt/local/lib/postgresql90/bin/pg_config /usr/local/bin/
-
-Alternately, add /opt/local/lib/postgresql90/bin/ to your path.
+Karl requires PostgreSQL be installed on your system. 9.4 or higher is required.
 
 Relstorage
 ----------
 
-Create the user and database for the PostgreSQL/Relstroage based instance of
+Create the user and database for the PostgreSQL/Relstorge based instance of
 Karl::
 
   $ createuser -P karltest
@@ -43,11 +33,11 @@ Check out the buildout from github::
 
 Create a virtual environment and run the buildout::
 
-  $ virtualenv -p python2.7 --no-site-packages .
+  $ virtualenv -p python2.7 .
   $ bin/python bootstrap-buildout.py
   $ bin/buildout
 
-Karl is now built and ready to run. To start Karl and some support prcocesses::
+Karl is now built and ready to run. To start Karl and some support processes::
 
   $ bin/supervisord
 
@@ -57,7 +47,7 @@ You can see what's running with::
 
 At least the karl and updater processes should be running.
 
-You'll need to apply some Postgrea schema updates with::
+You'll need to apply some Postgres schema updates with::
 
   $ bin/pgevolve -l
 
