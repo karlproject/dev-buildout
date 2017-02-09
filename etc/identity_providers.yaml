@@ -1,0 +1,35 @@
+- name: oktapreview
+  metadata_url: https://osf.oktapreview.com/app/exk9fywwf4HzhxgOg0h7/sso/saml/metadata
+
+- name: christophermrossi.com
+  metadata: |
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://accounts.google.com/o/saml2?idpid=C02cgbs8b" validUntil="2022-01-31T13:07:15.000Z">
+      <md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:KeyDescriptor use="signing">
+          <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+            <ds:X509Data>
+              <ds:X509Certificate>MIIDdDCCAlygAwIBAgIGAVn5yU9lMA0GCSqGSIb3DQEBCwUAMHsxFDASBgNVBAoTC0dvb2dsZSBJ
+    bmMuMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MQ8wDQYDVQQDEwZHb29nbGUxGDAWBgNVBAsTD0dv
+    b2dsZSBGb3IgV29yazELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWEwHhcNMTcwMjAx
+    MTMwNzE1WhcNMjIwMTMxMTMwNzE1WjB7MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEWMBQGA1UEBxMN
+    TW91bnRhaW4gVmlldzEPMA0GA1UEAxMGR29vZ2xlMRgwFgYDVQQLEw9Hb29nbGUgRm9yIFdvcmsx
+    CzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+    MIIBCgKCAQEAvsu4FW8EOrhucBWUfpOp9KUYEAIYFr9WfEZV4TlobFTNECcrKiaBhV37v+qGSyDl
+    vkkF0hRTMPEkObV/xcsslK46f/x4GM1n5HWGGyq4pcw0WS2NWlFucZCvegNdYZR8TT6hN3NQYI9D
+    E4XuZTvR9PA97YatS8KpqkuyviHJigdc/pvFmTxTCgyEvJpd4xYQ+3tOeLhLaSPClQpeFlRxvcsL
+    BPxQBqq1W9lQr+Ly1rXJ5SltasufSTLGYFn6nQ1DqsawgivBL/4coxEwyecy+cGqQnCtNsffGQrx
+    D8ZA9d7OgM+SiJkT/Qe1tQv4OPAHY+fUn3Cw7dET/l9HdPCR/QIDAQABMA0GCSqGSIb3DQEBCwUA
+    A4IBAQAVkJ+dwhJ4ZrlMwDUiDE6WCFLFmZ/SpF7EExdBMWP3LAqiWfscI6jTEY18SOkqUcu/jFHO
+    92a6N4+Ey9AopD+TqP+wR2wyvo/ExQ66ejOsnjVm4rrTrIQ5tG7C2uymw+qZg9WhdE48BS6lujRB
+    HaVFkw9b31E5dDKGKRssk/6hFmmq7HgA9kv7AExA9JZ6ZndoyUejVKPd5b/QXbbnoYfBikMt9lQE
+    2IyQwC7VXXFMrpBqk2/Tc/Bp01C9FTcpfUvequOxtC6UmiwM3D9sl4oaqk7n/vV0z1f8OOxQOhzh
+    Pq7gogR8djGqQgi8LEPrVdseZVi7NKrBMtMUxAsLpgnR</ds:X509Certificate>
+            </ds:X509Data>
+          </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://accounts.google.com/o/saml2/idp?idpid=C02cgbs8b"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://accounts.google.com/o/saml2/idp?idpid=C02cgbs8b"/>
+      </md:IDPSSODescriptor>
+    </md:EntityDescriptor>
